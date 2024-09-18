@@ -68,7 +68,7 @@ export default function Dashboard() {
         </table>
       </div>
 
-      {/* Add/Edit Modal */}
+      
       {isModalOpen && (
         <AddRecordModal
           isOpen={isModalOpen}

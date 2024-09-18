@@ -59,7 +59,7 @@ export default function AddRecordModal({ isOpen, onClose, onSubmit, initialData 
           {initialData ? 'Edit Health Record' : 'Add Health Record'}
         </h2>
         <form onSubmit={handleSubmit}>
-          {/* Date Input */}
+         
           <div className="mb-4">
             <label className="block text-sm font-medium">Date</label>
             <input
@@ -72,7 +72,7 @@ export default function AddRecordModal({ isOpen, onClose, onSubmit, initialData 
             />
           </div>
 
-          {/* Body Temperature Input */}
+        
           <div className="mb-4">
             <label className="block text-sm font-medium">Body Temperature (°F/°C)</label>
             <input
@@ -85,7 +85,7 @@ export default function AddRecordModal({ isOpen, onClose, onSubmit, initialData 
             />
           </div>
 
-          {/* Blood Pressure Inputs */}
+         
           <div className="mb-4">
             <label className="block text-sm font-medium">Systolic Pressure</label>
             <input
@@ -110,7 +110,7 @@ export default function AddRecordModal({ isOpen, onClose, onSubmit, initialData 
             />
           </div>
 
-          {/* Heart Rate Input */}
+         
           <div className="mb-4">
             <label className="block text-sm font-medium">Heart Rate (bpm)</label>
             <input
@@ -123,7 +123,7 @@ export default function AddRecordModal({ isOpen, onClose, onSubmit, initialData 
             />
           </div>
 
-          {/* Action Buttons */}
+          
           <div className="flex justify-end">
             <button type="button" onClick={onClose} className="mr-4 px-4 py-2 bg-gray-300 rounded">
               Cancel
