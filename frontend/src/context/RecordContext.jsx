@@ -16,7 +16,7 @@ export const RecordProvider = ({ children }) => {
     fetchData();
   }, []);
 
-  // Fetch records from API
+
   const fetchData = async () => {
     setLoading(true);
     try {
@@ -32,13 +32,13 @@ export const RecordProvider = ({ children }) => {
 
   
   const addOrUpdateRecord = async (formData, selectedRecord = null) => {
-    setLoading(true);  // Start loading
+    setLoading(true); 
 
     if (selectedRecord) {
       try {
         await axios.put(`${import.meta.env.VITE_API_URL}/api/health-records/${selectedRecord._id}`, formData);
 
-        // Update record in state
+        
         const updatedRecords = records.map((record) =>
           record._id === selectedRecord._id ? { ...record, ...formData } : record
         );
@@ -59,7 +59,7 @@ export const RecordProvider = ({ children }) => {
         setRecords([newRecord, ...records]);
         setFilteredRecords([newRecord, ...filteredRecords]);
 
-        // Send data to backend and fetch the actual data again
+        // Sending data to backend and fetching the actual data again
         await axios.post(`${import.meta.env.VITE_API_URL}/api/health-records/`, formData);
 
         // Re-fetch records to get the latest from backend

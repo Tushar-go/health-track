@@ -3,7 +3,7 @@ import { HealthRecord } from '../models/HealthRecord.js';
 
 const router = express.Router();
 
-// Create a new health record
+
 router.post('/', async (req, res) => {
   try {
     const { date, bodyTemperature, bloodPressure, heartRate } = req.body;
@@ -20,7 +20,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Get all health records
+
 router.get('/', async (req, res) => {
   try {
     const records = await HealthRecord.find();
@@ -30,7 +30,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Get a specific health record by ID
+
 router.get('/:id', async (req, res) => {
   try {
     const record = await HealthRecord.findById(req.params.id);
@@ -41,7 +41,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// Update a specific health record by ID
+
 router.put('/:id', async (req, res) => {
   try {
     const updatedRecord = await HealthRecord.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -52,7 +52,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// Delete a specific health record by ID
+
 router.delete('/:id', async (req, res) => {
   try {
     const deletedRecord = await HealthRecord.findByIdAndDelete(req.params.id);
